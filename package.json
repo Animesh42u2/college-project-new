@@ -1,5 +1,18 @@
 {
+  "name": "ray-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "frontend",
+    "admin",
+    "backend"
+  ],
   "dependencies": {
     "mongodb": "^6.10.0"
+  },
+  "scripts": {
+    "install": "npm --prefix frontend install && npm --prefix admin install && npm --prefix backend install",
+    "build": "npm --prefix frontend run build && npm --prefix admin run build",
+    "start": "npm --prefix backend start"
   }
 }
